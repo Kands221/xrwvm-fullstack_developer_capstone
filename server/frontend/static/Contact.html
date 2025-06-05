@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us - Dealerships</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-header {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .contact-form {
+      padding: 20px;
+    }
+    .contact-info {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+    .map-container {
+      height: 300px;
+      width: 100%;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <div class="card">
+      <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Please fill out the form below or use our contact information.</p>
+      </div>
+      
+      <div class="row p-4">
+        <!-- Contact Form -->
+        <div class="col-md-7">
+          <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form id="contactForm" action="/submit-contact" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject" name="subject">
+                  <option value="general">General Inquiry</option>
+                  <option value="sales">Sales</option>
+                  <option value="service">Service</option>
+                  <option value="parts">Parts</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="col-md-5">
+          <div class="contact-info">
+            <h3>Our Contact Information</h3>
+            <div class="map-container">
+              <p>Map will be displayed here</p>
+            </div>
+            <h4>Main Dealership</h4>
+            <p><i class="bi bi-geo-alt"></i> 123 Auto Boulevard, Car City, CC 12345</p>
+            <p><i class="bi bi-telephone"></i> (555) 123-4567</p>
+            <p><i class="bi bi-envelope"></i> info@dealerships.com</p>
+            
+            <h4>Hours of Operation</h4>
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td>Monday - Friday</td>
+                  <td>9:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>10:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="me-3">Facebook</a>
+              <a href="#" class="me-3">Twitter</a>
+              <a href="#" class="me-3">Instagram</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Dealerships. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="/static/bootstrap.bundle.min.js"></script>
+</body>
+</html>
